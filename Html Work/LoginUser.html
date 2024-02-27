@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="../Css/style.css">
+</head>
+<body>
+    <center><h1>Smart Shopping...! Be Smart Be Quick</h1></center>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <center>
+            <Label><b>Login</b></Label>
+        <br>
+        <input id="Email" type="text" name="Email"  placeholder="Email" style="margin-top: 10px;">
+        <br>
+        <input id="Password" type="password" name="Password" placeholder="Password">
+        <br>
+        <button id="Login" name="Login">Login</button>
+        <br>
+       
+        <a href="RegisterUser.html">Register User</a> 
+        <a href="#"id="logshop">Register Shop</a> 
+        
+       </center>
+    </form>
+</body>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyB3EQw_ZnqvbU-4mCKPTkYqLAnRuNCRF0g",
+      authDomain: "smart-shoping-50643.firebaseapp.com",
+      projectId: "smart-shoping-50643",
+      storageBucket: "smart-shoping-50643.appspot.com",
+      messagingSenderId: "648451052020",
+      appId: "1:648451052020:web:e99371c24052d3528aa9a1",
+      measurementId: "G-2VREM1W7CB"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+
+    const auth = getAuth();
+	  console.log(app);
+
+	  
+
+	  
+
+	  //----- Login code start	  
+	  document.getElementById("Login").addEventListener("click", function() {
+        event.preventDefault()
+		  var email =  document.getElementById("Email").value;
+		  var password = document.getElementById("Password").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+            window.location.assign("MainShop.html");
+		    alert(user.email+" Login successfully!!!");
+		    // document.getElementById('logout').style.display = 'block';
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		    alert(errorMessage);
+		  });		  		  
+	  });
+	  //----- End
+
+	//   //----- Logout code start	  
+	//   document.getElementById("logout").addEventListener("click", function() {
+	// 	  signOut(auth).then(() => {
+	// 		  // Sign-out successful.
+	// 		  console.log('Sign-out successful.');
+	// 		  alert('Sign-out successful.');
+	// 		  document.getElementById('logout').style.display = 'none';
+	// 		}).catch((error) => {
+	// 		  // An error happened.
+	// 		  console.log('An error happened.');
+	// 		});		  		  
+	//   });
+	  //----- End
+   
+
+  </script>
+   <script src="../Html Work/loginshope.js"></script>
+
+</html>

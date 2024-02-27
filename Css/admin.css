@@ -1,0 +1,15 @@
+body
+{
+    background-color: rgb(1, 7, 37);
+    color: aliceblue;
+}
+button
+{
+    width: 100px;
+    height: 30px;
+    color: wheat;
+    background-color: rgb(112, 6, 199);
+    border-radius: 4px;
+    
+
+}

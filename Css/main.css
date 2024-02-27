@@ -1,0 +1,99 @@
+.navbar
+{
+    background-color: rgb(5, 1, 31);
+    border-radius:30px ;
+}
+.navbar ul
+{
+    overflow: auto;
+}
+.navbar li
+{
+    float: right;
+    list-style: none;
+    margin: 13px 20px;
+   
+}
+.navbar li a
+{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .Title 
+{
+    float: left;
+    font-size: 20px;
+    font-weight: bolder;   
+    /* overflow: auto;    */
+
+}
+
+.mobile
+{
+    height: 500px;
+    width: 600px;
+    margin-top: 50px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.shoes
+{
+    height: 500px;
+    width: 400px;
+    margin-top: 100px;
+}
+.Tpant
+{
+    height: 500px;
+    width: 200px;
+    margin-top: 100px;
+}
+.Swatch
+{
+    height: 300px;
+    width: 300px;
+    margin-top: 100px;
+}
+h2
+{
+    margin-top: 10;
+    color: beige;
+    text-decoration: none;
+}
+a
+{
+    text-decoration: none;
+}
+
+/* .End
+{
+    color: beige;
+} */
+
+
+
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #060606;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #1500fed4;
+  }
